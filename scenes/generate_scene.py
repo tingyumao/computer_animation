@@ -10,7 +10,7 @@ def init_scene():
     init.append("<scene>")
     init.append("<duration time=\"5.0\"/>")
     init.append("<integrator type=\"explicit-euler\" dt=\"0.01\"/>")
-    init.append("<maxsimfreq max=\"50.0\"/>")
+    init.append("<maxsimfreq max=\"500.0\"/>")
     init.append("<simplegravity fx=\"0.0\" fy=\"-9.81\"/>")
     init.append("<backgroundcolor r=\"0.0\" g=\"0.0\" b=\"0.0\"/>")
     return init
@@ -18,14 +18,19 @@ def init_scene():
 def end_scene():
     return ["</scene>"]
     
-def add_particle(i, m, x, y, vx, vy, fixed, radius, color):
+def add_particle(i, m, x, y, vx, vy, fixed, radius, color, duration=None):
     # add position and velocity
     particle = "<particle m=\"{:.2f}\" px=\"{:.2f}\" py=\"{:.2f}\" vx=\"{:.2f}\" vy=\"{:.2f}\" fixed=\"{:d}\" radius=\"{:.2f}\"/>".format(m, x, y, vx, vy, fixed, radius)
     # add color
     r, g, b = color
     particle_color = "<particlecolor i=\"{:d}\" r=\"{:.2f}\" g=\"{:.2f}\" b=\"{:.2f}\"/>".format(i, r, g, b)
     
-    return [particle, particle_color]
+    ## <particlepath i="23" duration="10.0" r="1.0" g="0.469387755102" b="0.530612244898"/>
+    if duration is None:
+        return [particle, particle_color]
+    else:
+        particle_path = "<particlepath i=\"{:d}\" duration=\"{:.2f}\" r=\"{:.2f}\" g=\"{:.2f}\" b=\"{:.2f}\"/>".format(i, duration, r, g, b)
+        return [particle, particle_color, particle_path] 
 
 def add_edge(i, j, radius):
     edge = "<edge i=\"{:d}\" j=\"{:d}\" radius=\"{:.2f}\"/>".format(i, j, radius)
@@ -56,7 +61,8 @@ def main():
         fixed = 0
         radius = 0.02
         color = [random.random(), random.random(), random.random()]
-        scene += add_particle(i, m, px, py, vx, vy, fixed, radius, color)
+        duration = None
+        scene += add_particle(i, m, px, py, vx, vy, fixed, radius, color, duration)
         
     # add fixed points and edge to make a cube
     m = 1.0
