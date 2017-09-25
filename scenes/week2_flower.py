@@ -43,7 +43,9 @@ def main():
                 vx, vy = 0.0, 0.0
                 
             FIX = 0
-            scene += add_particle(idx, 1, dist*i, dist*j, vx, vy, FIX, p_r, [0.0,0.7,0.5])
+            color = [random.random(), random.random(), random.random()]
+            duration = None
+            scene += add_particle(idx, 1, dist*i, dist*j, vx, vy, FIX, p_r, color, duration)
     # add edge and spring forces
     edge_id = 0
     k = 5

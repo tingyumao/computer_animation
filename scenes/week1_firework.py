@@ -47,7 +47,6 @@ def main():
     scene += add_edge(num_particles+2, num_particles+3, radius)
     scene += add_edge(num_particles+3, num_particles, radius)
     """
->>>>>>> 5dce69cccaee8496ec2d75226ccae26b6e6548f7
     
     # add end mark </scene> into scene
     scene += end_scene()
