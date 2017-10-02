@@ -72,7 +72,7 @@ def main():
     scene += end_scene()
     
     # write scene into .xml file
-    with open(os.path.join("./", filename), "w") as output:
+    with open(os.path.join("../../scenes/", filename), "w") as output:
         for line in scene:
             output.write(line)
             output.write("\n")
