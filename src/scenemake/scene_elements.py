@@ -30,7 +30,7 @@ def add_springforce(edge_id, k, l0):
     edge_springforce = "<springforce edge=\"{:d}\" k=\"{:.2f}\" l0=\"{:.2f}\" />".format(edge_id, k, l0)
     return [edge_springforce] 
 
-def add_gravity(i, j, kbs, kvc):
+def add_gravity(i, j, G):
     """
     <gravitationalforce i="0" j="1" G="10.118419"/>
     """
@@ -71,4 +71,18 @@ def edit_edgecolor(i, color):
     r, g, b = color
     edgecolor = "<edgecolor i=\"{:d}\" r=\"{:.2f}\" g=\"{:.2f}\" b=\"{:.2f}\"/>".format(i, r, g, b)
     return [edgecolor]
-    
+
+def add_halfplane(nx, nh):
+    """
+    <halfplane px="0.0" py="-1.0" nx="0.0" ny="1.0"/>
+    """
+    halfplane = "<halfplane px=\"{:.2f}\" py=\"{:.2f}\" nx=\"{:.2f}\" ny=\"{:.2f}\"/>".format(nx[0], nx[1], nh[0], nh[1])
+    return [halfplane]
+
+def edit_planecolor(i, color):
+    """
+    <halfplanecolor i="0" r="1" g="0" b="0"/>
+    """
+    r, g, b = color
+    planecolor = "<halfplanecolor i=\"{:d}\" r=\"{:.2f}\" g=\"{:.2f}\" b=\"{:.2f}\"/>".format(i, r, g, b)
+    return [planecolor]
