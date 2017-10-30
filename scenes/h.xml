@@ -1,0 +1,87 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <duration time="50.0"/>
+  <maxsimfreq max="500.0"/>
+  <viewport cx="5.5" cy="0.0" size="12.0"/>
+
+  <rigidbodyintegrator type="symplectic-euler" dt="0.001"/>
+
+  <rigidbodyvertex x="0" y="5" m="1"/>
+  <rigidbodyvertex x="2" y="6" m="1"/>
+  <rigidbodyvertex x="2" y="1" m="1"/>
+  <rigidbodyvertex x="7" y="3.5" m="1"/>
+  <rigidbodyvertex x="9" y="2.5" m="1"/>
+  <rigidbodyvertex x="2" y="-1" m="1"/>
+  <rigidbodyvertex x="2" y="-5" m="1"/>
+  <rigidbodyvertex x="0" y="-6" m="1"/>
+  
+  <rigidbody p="0" p="1" p="2" p="3" p="4" p="5" p="6" p="7" vx="-10.0" vy="0.0" omega="2.0" r="0.2"/>
+  <rigidbodycolor body="0" r="0.0" g="0.0" b="0.0"/>
+    
+  <rigidbodyvertex x="9" y="-6" m="1"/>
+  <rigidbodyvertex x="11" y="-5" m="1"/>
+  <rigidbodyvertex x="11" y="6.5" m="1"/>
+  <rigidbodyvertex x="9" y="5.5" m="1"/>
+  <rigidbodyvertex x="9" y="2.5" m="1"/>
+  <rigidbodyvertex x="2" y="-1" m="1"/>
+  <rigidbodyvertex x="4" y="-2" m="1"/>
+  <rigidbodyvertex x="9" y="0.5" m="1"/>
+  
+  <rigidbody p="8" p="9" p="10" p="11" p="12" p="13" p="14" p="15" vx="10.0" vy="0.0" omega="2.0" r="0.2"/>
+  <rigidbodycolor body="1" r="0.0" g="0.0" b="0.0"/>
+    
+  <rigidbodyvertex x="2" y="6" m="1"/>
+  <rigidbodyvertex x="2" y="1" m="1"/>
+  <rigidbodyvertex x="4" y="2" m="1"/>
+  <rigidbodyvertex x="4" y="5" m="1"/>
+  
+  <rigidbody p="16" p="17" p="18" p="19" vx="0.0" vy="15.0" omega="2.0" r="0.2"/>
+  <rigidbodycolor body="2" r="0.0" g="0.0" b="0.0"/>
+    
+  <rigidbodyvertex x="2" y="-1" m="1"/>
+  <rigidbodyvertex x="2" y="-5" m="1"/>
+  <rigidbodyvertex x="4" y="-6" m="1"/>
+  <rigidbodyvertex x="4" y="-2" m="1"/>
+  
+  <rigidbody p="20" p="21" p="22" p="23" vx="0.0" vy="-10.0" omega="2.0" r="0.2"/>
+  <rigidbodycolor body="3" r="0.0" g="0.0" b="0.0"/>
+    
+  <rigidbodyvertex x="2" y="-5" m="1"/>
+  <rigidbodyvertex x="4" y="-6" m="1"/>
+  <rigidbodyvertex x="2" y="-7" m="1"/>
+  <rigidbodyvertex x="0" y="-6" m="1"/>
+  
+  <rigidbody p="24" p="25" p="26" p="27" vx="0.0" vy="-10.0" omega="2.0" r="0.2"/>
+  <rigidbodycolor body="4" r="0.0" g="0.0" b="0.0"/>
+    
+    
+  <rigidbodyvertex x="9" y="0.5" m="1"/>
+  <rigidbodyvertex x="9" y="-6" m="1"/>
+  <rigidbodyvertex x="7" y="-5" m="1"/>
+  <rigidbodyvertex x="7" y="-0.5" m="1"/>
+  
+  <rigidbody p="28" p="29" p="30" p="31" vx="0.0" vy="-10.0" omega="2.0" r="0.2"/>
+  <rigidbodycolor body="5" r="0.0" g="0.0" b="0.0"/>
+    
+  <rigidbodyvertex x="7" y="3.5" m="1"/>
+  <rigidbodyvertex x="9" y="2.5" m="1"/>
+  <rigidbodyvertex x="9" y="5.5" m="1"/>
+  <rigidbodyvertex x="7" y="6.5" m="1"/>
+  
+  <rigidbody p="32" p="33" p="34" p="35" vx="0.0" vy="15.0" omega="2.0" r="0.2"/>
+  <rigidbodycolor body="6" r="0.0" g="0.0" b="0.0"/>
+    
+  <rigidbodyvertex x="9" y="5.5" m="1"/>
+  <rigidbodyvertex x="7" y="6.5" m="1"/>
+  <rigidbodyvertex x="9" y="7.5" m="1"/>
+  <rigidbodyvertex x="11" y="6.5" m="1"/>
+  
+  <rigidbody p="36" p="37" p="38" p="39" vx="0.0" vy="15.0" omega="2.0" r="0.2"/>
+  <rigidbodycolor body="7" r="0.0" g="0.0" b="0.0"/>
+    
+  
+  <rigidbodygravityforce fx="0.0" fy="-9.0"/>
+    
+
+</scene>
+
