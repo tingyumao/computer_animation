@@ -38,6 +38,17 @@ def main():
     #init.append("<collision type=\"simple\" COR=\"1.0\"/>")
     init.append("<collision type=\"hybrid\" maxiters=\"10\" k=\"50\" COR=\"0\"/>")
     
+    <simtype type="rigid-body"/>
+  <description text="Hexagon"/>
+  <viewport cx="0.0" cy="0.0" size="10"/>
+  <maxsimfreq max="100.0"/>
+  <duration time="2.0"/>
+ 
+  <rigidbodyintegrator type="symplectic-euler" dt="0.01"/>
+
+  <rigidbodycollisionhandling detection="all-pairs" response="gr-velocity-projection"/>
+    
+    
     scene = init
     #############################################################
     # Add content here                                          #
